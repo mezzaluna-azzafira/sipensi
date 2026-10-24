@@ -1,0 +1,94 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+!.env.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# ------------------------------------------------------------------
+# Rahasia / kredensial — RAWAN DICURI, jangan pernah di-commit.
+# Catatan: .env* sudah di-ignore di atas (kunci Supabase & SUPABASE_SERVICE_ROLE_KEY
+# ada di .env.local). Baris di bawah menutup jenis file rahasia lainnya.
+# ------------------------------------------------------------------
+*.key
+*.pem
+*.p12
+*.pfx
+*.pkcs12
+*.crt
+*_rsa
+*_rsa.pub
+*_ed25519
+service-account*.json
+*-service-account.json
+secrets.json
+.secrets/
+credentials.json
+
+# Supabase — file kerja & sementara lokal
+supabase/.branches/
+supabase/.temp/
+supabase/.env
+
+# ------------------------------------------------------------------
+# Asisten AI — jangan dipublikasikan ke repo klien (semua jejak AI)
+# ------------------------------------------------------------------
+# Claude Code
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+AGENTS.md
+.mcp.json
+.mcp.local.json
+# Editor/asisten AI lain
+.cursor/
+.cursorrules
+.cursorignore
+.aider*
+.windsurf/
+.github/copilot-instructions.md
+.continue/
+.roo/
+
+# ------------------------------------------------------------------
+# Dokumentasi internal — jangan dipublikasikan ke repo klien.
+# Pola "README.md" tanpa slash berlaku di semua folder, jadi ini
+# menutup README.md di root maupun supabase/README.md.
+# ------------------------------------------------------------------
+README.md
